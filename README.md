@@ -8,6 +8,6 @@
 
 Так же в проекте SpaceCalculatorLib лежит текстовый файл второго тестового вопроса. Для удобства содержимое дублирую сюда. 
 
-  SELECT Products.Name, Categories.Name from Products 
-	LEFT JOIN Categories 
-	ON Products.Id = Categories.Id
+ SELECT Products.Name, Categories.Name 
+ FROM Products 
+ LEFT JOIN Categories ON Products.CategoryID = Categories.Id
