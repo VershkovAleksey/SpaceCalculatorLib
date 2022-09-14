@@ -1,5 +1,6 @@
 ﻿Запрос SQL
 
-	SELECT Products.Name, Categories.Name from Products 
+	SELECT Products.Name, Categories.Name 
+	FROM Products 
 	LEFT JOIN Categories 
-	ON Products.Id = Categories.Id
+	ON Products.CategoryId = Categories.Id
