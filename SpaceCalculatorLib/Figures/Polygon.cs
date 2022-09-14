@@ -3,10 +3,17 @@ using System.Collections.Generic;
 
 namespace SpaceCalculatorLib
 {
+    /// <summary>
+    /// Класс предоставляет свойства и методы для подсчета площади многоугольника. Наследуется от абстрактного класса Figure
+    /// </summary>
     public class Polygon : Figure
     {
         public override List<double> Edges { get; set; }
         public override LinkedList<Vertice> Vertices { get; set; }
+
+
+        /// <param name="edges">Ребра фигуры</param>
+        /// <param name="vertices">Вершины фигуры</param>
         public Polygon(List<double> edges, LinkedList<Vertice> vertices)
         {
             Edges = edges;
@@ -31,6 +38,12 @@ namespace SpaceCalculatorLib
                 vertice = vertice.Next;
             }
             return Math.Abs(space);
+        }
+
+        public double CalculateSpace(LinkedList<Vertice> vertices)
+        {
+            Vertices = vertices;
+            return CalculateSpace();
         }
 
     }

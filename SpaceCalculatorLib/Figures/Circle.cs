@@ -3,8 +3,14 @@ using System.Collections.Generic;
 
 namespace SpaceCalculatorLib
 {
+    /// <summary>
+    /// Класс предоставляет методы для расчета площади окружности. Наследуется от абстрактного класса Figure
+    /// </summary>
     public class Circle : Figure
     {
+        /// <summary>
+        /// Радиус окружности.
+        /// </summary>
         public double Radius { get; set; }
         public override List<double> Edges { get; set; }
         public override LinkedList<Vertice> Vertices { get; set; }
@@ -31,6 +37,7 @@ namespace SpaceCalculatorLib
             return Math.PI * Math.Pow(Radius, 2);
         }
 
+        /// <param name="radius">Радиус окружности</param>
         public double CalculateSpace(double radius)
         {
             Radius = radius;

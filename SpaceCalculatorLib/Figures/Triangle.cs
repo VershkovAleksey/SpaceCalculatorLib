@@ -4,6 +4,9 @@ using System.Text;
 
 namespace SpaceCalculatorLib
 {
+    /// <summary>
+    /// Класс предоставляет свойства и методы для работы с треугольником. Наследуется от абстрактного класса Figure.
+    /// </summary>
     public class Triangle : Figure
     {
         public override List<double> Edges { get; set; }
@@ -34,13 +37,11 @@ namespace SpaceCalculatorLib
             else
                 throw new Exception("У треугольника 3 стороны.");
         }
-        /// <summary>
-        /// Метод подсчета площади треугольника по трем сторонам
-        /// </summary>
+
+
         /// <param name="firstSide">Длина первой стороны</param>
         /// <param name="secondSide">Длина второй стороны</param>
         /// <param name="thirdSide">Длина третьей стороны</param>
-        /// <returns>Площадь треугольника</returns>
         public double CalculateSpace(double firstSide, double secondSide, double thirdSide)
         {
             Edges.Add(firstSide);
