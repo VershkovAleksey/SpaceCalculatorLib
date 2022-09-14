@@ -14,25 +14,25 @@ namespace TestSpaceCalculator
             double expected = Math.Pow(radius, 2) * Math.PI;
 
             Circle circle = new Circle();
-            double actual = circle.GetCircleSpace(radius);
+            double actual = circle.CalculateSpace(radius);
             Assert.AreEqual(expected, actual, "Площадь с заданным радиусом вычислена неправильно.");
         }
         [TestMethod]
-        public void TestGetSpaceCircle1()
+        public void TestGetSpaceCircleOverload()
         {
             Circle circle = new Circle();
             circle.Radius = 7;
             double expected = Math.Pow(circle.Radius, 2) * Math.PI;
-            double actual = circle.GetCircleSpace();
+            double actual = circle.CalculateSpace();
             Assert.AreEqual(expected, actual, "Площадь методом без перегрузки вычислена непавильно.");
         }
 
         [TestMethod]
         [ExpectedException(typeof(Exception))]
-        public void TestGetSpaceCircle2()
+        public void TestGetSpaceCircleException()
         {
             Circle circle = new Circle();
-            circle.GetCircleSpace(0);
+            circle.CalculateSpace(0);
         }
     }
 }
